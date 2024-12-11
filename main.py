@@ -23,7 +23,7 @@ if __name__ == "__main__":
     
     # train phase setting
     parser.add_argument("--pretrain_stage1", action='store_true')
-    parser.add_argument("--pretrain_stage2", action='store_true')
+    # parser.add_argument("--pretrain_stage2", action='store_true')
     parser.add_argument("--inference", action='store_true')
     
     # hyperparameters options
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     parser.add_argument('--batch_size2', default=2, type=int)
     parser.add_argument('--batch_size_infer', default=2, type=int)
     parser.add_argument('--maxlen', default=50, type=int)
-    parser.add_argument('--num_epochs', default=10, type=int)
+    parser.add_argument('--num_epochs', default=1, type=int)
     parser.add_argument("--stage1_lr", type=float, default=0.0001)
     parser.add_argument("--stage2_lr", type=float, default=0.0001)
     
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     
     if args.pretrain_stage1:
         train_model_phase1(args)
-    elif args.pretrain_stage2:
-        train_model_phase2(args)
-    elif args.inference:
-        inference(args)
+    # elif args.pretrain_stage2:
+    #     train_model_phase2(args)
+    # elif args.inference:
+    #     inference(args)
